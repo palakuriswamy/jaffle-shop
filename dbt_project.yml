@@ -7,7 +7,7 @@ require-dbt-version: ">=1.5.0"
 dbt-cloud:
   project-id: 275557 # Put your project id here
 
-profile: default # Put your profile here
+profile: jaffle_shop # Use the 'jaffle_shop' profile defined in the user's profiles.yml
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -34,5 +34,6 @@ models:
   jaffle_shop:
     staging:
       +materialized: view
+      +static_analysis: 'off'
     marts:
       +materialized: table

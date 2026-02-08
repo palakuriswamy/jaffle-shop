@@ -1,4 +1,5 @@
 -- metricflow_time_spine.sql
+{{ config(static_analysis='unsafe') }}
 with
 
 days as (
